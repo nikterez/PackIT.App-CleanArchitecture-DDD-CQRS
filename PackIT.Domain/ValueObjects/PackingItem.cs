@@ -13,7 +13,7 @@ namespace PackIT.Domain.ValueObjects
         public uint Quantity { get; }
         public bool IsPacked { get; init; }
 
-        public PackingItem(string? name, uint quantity, bool isPacked)
+        public PackingItem(string? name, uint quantity, bool isPacked = false)
         {
             Name = string.IsNullOrEmpty(name) ? throw new EmptyPackingListItemNameException() : name;
             Quantity = quantity;
