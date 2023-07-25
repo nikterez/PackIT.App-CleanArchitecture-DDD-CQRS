@@ -2,15 +2,10 @@
 using PackIT.Domain.Events;
 using PackIT.Domain.Exceptions;
 using PackIT.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackIT.Domain.Entities
 {
-    public class PackingList :AggregateRoot<PackingListId>
+    public class PackingList : AggregateRoot<PackingListId>
     {
         public PackingListId Id { get; private set; }
         private PackingListName _name;
@@ -29,11 +24,11 @@ namespace PackIT.Domain.Entities
             _localization = localization;
         }
 
-        public void AddItem(PackingItem item) 
+        public void AddItem(PackingItem item)
         {
             var itemExists = _items.Any(i => i.Equals(item));
 
-            if (itemExists) 
+            if (itemExists)
             {
                 throw new PackingItemAlreadyExistsException(_name, item.Name);
             }
@@ -42,7 +37,7 @@ namespace PackIT.Domain.Entities
             AddEvent(new PackingItemAdded(this, item));
         }
 
-        public void AddItems(IEnumerable<PackingItem> items) 
+        public void AddItems(IEnumerable<PackingItem> items)
         {
             foreach (var item in items)
             {
@@ -62,16 +57,16 @@ namespace PackIT.Domain.Entities
         public void RemoveItem(string itemName)
         {
             var item = GetItem(itemName);
-           
+
             _items.Remove(item);
             AddEvent(new PackingItemRemoved(this, item));
         }
 
         private PackingItem GetItem(string itemName)
         {
-            var item = _items.First(i=> i.Name == itemName);
+            var item = _items.First(i => i.Name == itemName);
 
-            if(item is null)
+            if (item is null)
             {
                 throw new PackingItemNotFoundException(itemName);
             }

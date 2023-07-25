@@ -1,9 +1,4 @@
 ﻿using PackIT.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackIT.Domain.ValueObjects
 {
@@ -12,7 +7,7 @@ namespace PackIT.Domain.ValueObjects
         public ushort Value { get; }
         public TravelDays(ushort value)
         {
-            if(value is 0 or > 100)
+            if (value is 0 or > 100)
             {
                 throw new InvalidTravelDaysException(value);
             }

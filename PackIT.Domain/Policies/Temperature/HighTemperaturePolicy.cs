@@ -1,9 +1,4 @@
 ﻿using PackIT.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackIT.Domain.Policies.Temperature
 {
@@ -16,6 +11,6 @@ namespace PackIT.Domain.Policies.Temperature
                 new("Hat",1),
                 new("Sunglasses", 1),
                 new("Water Bottle", 3)
-            };     
+            };
     }
 }
