@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PackIT.Common\PackIT.Common.csproj" />
+  </ItemGroup>
+
 </Project>

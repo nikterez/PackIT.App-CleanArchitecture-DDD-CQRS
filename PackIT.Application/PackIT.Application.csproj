@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackIT.Common\PackIT.Common.csproj" />
+    <ProjectReference Include="..\PackIT.Domain\PackIT.Domain.csproj" />
   </ItemGroup>
 
 </Project>
