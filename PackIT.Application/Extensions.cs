@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PackIT.Common;
+using PackIT.Common.Commands;
 using PackIT.Domain.Factories;
 using PackIT.Domain.Policies;
 
