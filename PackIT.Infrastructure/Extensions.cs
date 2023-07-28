@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿
+using Microsoft.Extensions.DependencyInjection;
+using PackIT.Common.Queries;
 
 namespace PackIT.Infrastructure
 {
@@ -6,6 +8,8 @@ namespace PackIT.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
+            services.AddQueries();
+            
             return services;
         }
     }
