@@ -1,15 +1,31 @@
-﻿using PackIT.Application.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using PackIT.Application.DTOs;
 using PackIT.Application.Queries;
 using PackIT.CommonAbstractions.Queries;
+using PackIT.Infrastructure.Data.Contexts;
+using PackIT.Infrastructure.Data.Models;
 
 namespace PackIT.Infrastructure.Queries.Handlers
 {
-    public class GetPackingListHandler : IQueryHandler<GetPackingList, PackingListReadModel>
+    internal sealed class GetPackingListHandler : IQueryHandler<GetPackingList, PackingListDTO>
     {
+        private readonly DbSet<PackingListReadModel> _packingLists;
 
-        public Task<PackingListReadModel> HandleAsync(GetPackingList query)
+        public GetPackingListHandler(ReadDbContext context)
         {
-            throw new NotImplementedException();
+            _packingLists = context.PackingLists;
+        }
+
+        public Task<PackingListDTO> HandleAsync(GetPackingList query)
+        {
+            var packingListDTO = _packingLists
+                .Include(pl => pl.Items)
+                .Where(pl => pl.Id == query.Id)
+                .Select(pl => pl.AsDTO())
+                .AsNoTracking()
+                .SingleOrDefaultAsync();
+
+            return packingListDTO;
         }
     }
 }
