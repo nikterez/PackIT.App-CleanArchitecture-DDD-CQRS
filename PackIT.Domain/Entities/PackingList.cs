@@ -2,6 +2,7 @@
 using PackIT.Domain.Events;
 using PackIT.Domain.Exceptions;
 using PackIT.Domain.ValueObjects;
+using System.Drawing;
 
 namespace PackIT.Domain.Entities
 {
@@ -12,10 +13,15 @@ namespace PackIT.Domain.Entities
         private Localization _localization;
         private readonly LinkedList<PackingItem> _items = new();
 
-        //private PackingList(PackingListId id, PackingListName name, Localization localization, LinkedList<PackingItem> items) : this(id, name, localization)
-        //{
-        //    _items = items;
-        //}
+        private PackingList(PackingListId id, PackingListName name, Localization localization, LinkedList<PackingItem> items) : this(id, name, localization)
+        {
+            _items = items;
+        }
+
+        private PackingList()
+        {
+            
+        }
 
         internal PackingList(PackingListId id, PackingListName name, Localization localization)
         {

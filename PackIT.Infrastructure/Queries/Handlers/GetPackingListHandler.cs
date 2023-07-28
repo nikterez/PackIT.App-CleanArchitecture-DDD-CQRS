@@ -4,10 +4,10 @@ using PackIT.CommonAbstractions.Queries;
 
 namespace PackIT.Infrastructure.Queries.Handlers
 {
-    public class GetPackingListHandler : IQueryHandler<GetPackingList, PackingListDTO>
+    public class GetPackingListHandler : IQueryHandler<GetPackingList, PackingListReadModel>
     {
 
-        public Task<PackingListDTO> HandleAsync(GetPackingList query)
+        public Task<PackingListReadModel> HandleAsync(GetPackingList query)
         {
             throw new NotImplementedException();
         }
