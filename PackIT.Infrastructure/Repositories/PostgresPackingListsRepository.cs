@@ -11,7 +11,7 @@ namespace PackIT.Infrastructure.Repositories
         private readonly DbSet<PackingList> _packingList;
         private readonly WriteDbContext _writeDbContext;
 
-        public PostgresPackingListsRepository(DbSet<PackingList> packingList, WriteDbContext writeDbContext)
+        public PostgresPackingListsRepository(WriteDbContext writeDbContext)
         {
             _packingList = writeDbContext.PackingLists;
             _writeDbContext = writeDbContext;
