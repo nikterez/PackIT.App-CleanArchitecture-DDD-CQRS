@@ -5,10 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using PackIT.Application.Services;
 using PackIT.Common.Options;
 using PackIT.Common.Queries;
+using PackIT.CommonAbstractions.Commands;
 using PackIT.Domain.Repositories;
 using PackIT.Infrastructure.Data.Contexts;
 using PackIT.Infrastructure.Data.Options;
 using PackIT.Infrastructure.Data.Services;
+using PackIT.Infrastructure.Logging;
 using PackIT.Infrastructure.Repositories;
 using PackIT.Infrastructure.Services;
 
@@ -21,6 +23,7 @@ namespace PackIT.Infrastructure
             services.AddPostgres(config);
             services.AddQueries();
             services.AddServices();
+            services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
             
             return services;
         }
