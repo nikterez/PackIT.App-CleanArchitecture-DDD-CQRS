@@ -9,7 +9,7 @@ namespace PackIT.Application.Services
 {
     public interface IPackingListReadService
     {
-        Task<IEnumerable<PackingListDTO>> SearchAsync(string name);
+        //Task<IEnumerable<PackingListDTO>> SearchAsync(string name);
         Task<bool> CheckPackingListExistsbyName(string name);
     }
 }
