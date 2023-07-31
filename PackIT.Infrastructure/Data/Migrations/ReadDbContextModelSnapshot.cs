@@ -2,21 +2,18 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PackIT.Infrastructure.Data.Contexts;
 
 #nullable disable
 
-namespace PackIT.Infrastructure.EF.Migrations
+namespace PackIT.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ReadDbContext))]
-    [Migration("20230731104443_Initial")]
-    partial class Initial
+    partial class ReadDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
