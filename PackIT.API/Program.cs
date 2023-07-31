@@ -31,6 +31,9 @@ namespace PackIT.API
             }
 
             app.UseHttpsRedirection();
+            app.UseShared();
+
+            app.UseRouting();
 
             app.UseAuthorization();
 
