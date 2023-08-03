@@ -17,13 +17,11 @@ namespace PackIT.API
             builder.Services.AddInfrastructure(builder.Configuration);
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -34,9 +32,7 @@ namespace PackIT.API
             app.UseShared();
 
             app.UseRouting();
-
             app.UseAuthorization();
-
 
             app.MapControllers();
 

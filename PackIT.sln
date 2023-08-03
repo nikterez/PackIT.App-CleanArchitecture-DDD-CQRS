@@ -7,17 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4A6F3777-1BC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5D8CE38E-5EEA-4F8B-AA73-1C85B9F17F4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Common", "PackIT.Common\PackIT.Common.csproj", "{79B00438-0CDE-4AA0-9215-B6357C143688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Common", "PackIT.Common\PackIT.Common.csproj", "{79B00438-0CDE-4AA0-9215-B6357C143688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.CommonAbstractions", "PackIT.CommonAbstractions\PackIT.CommonAbstractions.csproj", "{996E521B-0712-4EC3-A422-64BD4F3ECB35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.CommonAbstractions", "PackIT.CommonAbstractions\PackIT.CommonAbstractions.csproj", "{996E521B-0712-4EC3-A422-64BD4F3ECB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Domain", "PackIT.Domain\PackIT.Domain.csproj", "{6C95654A-D6F7-40E7-85B1-F6892A8D4851}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Domain", "PackIT.Domain\PackIT.Domain.csproj", "{6C95654A-D6F7-40E7-85B1-F6892A8D4851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Application", "PackIT.Application\PackIT.Application.csproj", "{B619F8B1-2DA6-43EB-9FA1-BC60CE98856E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Application", "PackIT.Application\PackIT.Application.csproj", "{B619F8B1-2DA6-43EB-9FA1-BC60CE98856E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Infrastructure", "PackIT.Infrastructure\PackIT.Infrastructure.csproj", "{C93E1BD6-02EA-4FAF-9037-4DE2732157AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.Infrastructure", "PackIT.Infrastructure\PackIT.Infrastructure.csproj", "{C93E1BD6-02EA-4FAF-9037-4DE2732157AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.API", "PackIT.API\PackIT.API.csproj", "{B53012FD-F8CC-4345-81E6-7A327E7ACE62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackIT.API", "PackIT.API\PackIT.API.csproj", "{B53012FD-F8CC-4345-81E6-7A327E7ACE62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BE5F247E-29FE-4D20-927D-16F28E9C4672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.UnitTests", "PackIT.UnitTests\PackIT.UnitTests.csproj", "{E0380EFF-E393-405D-AD3A-D23A9051527E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{B53012FD-F8CC-4345-81E6-7A327E7ACE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53012FD-F8CC-4345-81E6-7A327E7ACE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B53012FD-F8CC-4345-81E6-7A327E7ACE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0380EFF-E393-405D-AD3A-D23A9051527E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0380EFF-E393-405D-AD3A-D23A9051527E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0380EFF-E393-405D-AD3A-D23A9051527E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0380EFF-E393-405D-AD3A-D23A9051527E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{B619F8B1-2DA6-43EB-9FA1-BC60CE98856E} = {4A6F3777-1BCF-4F4F-8024-F64C6EFA3548}
 		{C93E1BD6-02EA-4FAF-9037-4DE2732157AC} = {4A6F3777-1BCF-4F4F-8024-F64C6EFA3548}
 		{B53012FD-F8CC-4345-81E6-7A327E7ACE62} = {4A6F3777-1BCF-4F4F-8024-F64C6EFA3548}
+		{E0380EFF-E393-405D-AD3A-D23A9051527E} = {BE5F247E-29FE-4D20-927D-16F28E9C4672}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99DCAADE-C717-4C24-8825-537BDD97305A}
